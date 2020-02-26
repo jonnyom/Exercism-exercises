@@ -1,5 +1,6 @@
 pub fn build_proverb(list: &[&str]) -> String {
-    let mut proverb: Vec<String> = (1..list.len()).step_by(2)
+    if list.is_empty() { return String::new(); }
+    let mut proverb: Vec<String> = (1..list.len())
         .map(|i| {
             String::from(&(format!("For want of a {} the {} was lost.", list[i - 1], list[i])))
         })
@@ -8,6 +9,5 @@ pub fn build_proverb(list: &[&str]) -> String {
         "And all for the want of a {}.",
         list[0]
     )));
-    println!("{:?}", proverb);
     proverb.join("\n")
 }
