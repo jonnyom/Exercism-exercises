@@ -16,9 +16,9 @@ pub fn brackets_are_balanced(string: &str) -> bool {
 
 fn is_matching_pair(c1: &str, c2: &str) -> bool {
     match c1 {
-        x if x == "{" && c2 == "}" => true,
-        x if x == "(" && c2 == ")" => true,
-        x if x == "[" && c2 == "]" => true,
+        "{" => c2 == "}",
+        "(" => c2 == ")",
+        "[" => c2 == "]",
         _ => false,
     }
 }
