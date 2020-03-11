@@ -20,7 +20,11 @@ pub mod graph {
                 }
 
                 pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
-                    self.attrs.extend(attrs.iter().map(|(attr1, attr2)| ((*attr1).to_string(), (*attr2).to_string()) ));
+                    self.attrs.extend(
+                        attrs
+                            .iter()
+                            .map(|(attr1, attr2)| ((*attr1).to_string(), (*attr2).to_string())),
+                    );
                     self
                 }
             }
@@ -44,7 +48,11 @@ pub mod graph {
                 }
 
                 pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
-                    self.attrs.extend(attrs.iter().map(|(attr1, attr2)| ((*attr1).to_string(), (*attr2).to_string()) ));
+                    self.attrs.extend(
+                        attrs
+                            .iter()
+                            .map(|(attr1, attr2)| ((*attr1).to_string(), (*attr2).to_string())),
+                    );
                     self
                 }
 
@@ -81,7 +89,11 @@ pub mod graph {
         }
 
         pub fn with_attrs(mut self, attrs: &[(&str, &str)]) -> Self {
-            self.attrs.extend(attrs.iter().map(|(attr1, attr2)| ((*attr1).to_string(), (*attr2).to_string()) ));
+            self.attrs.extend(
+                attrs
+                    .iter()
+                    .map(|(attr1, attr2)| ((*attr1).to_string(), (*attr2).to_string())),
+            );
             self
         }
 
